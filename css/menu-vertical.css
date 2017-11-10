@@ -1,0 +1,80 @@
+
+.hover-underline-menu {
+    width: 100%;
+  }
+  
+  .hover-underline-menu .menu {
+    background-color: #2c38409e;
+  }
+  
+  .hover-underline-menu .menu a {
+    color: #fefefe;
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .hover-underline-menu .menu .underline-from-center {
+    position: relative;
+  }
+  
+  .hover-underline-menu .menu .underline-from-center::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 0.125rem);
+    border-bottom: 0.125rem solid #fefefe;
+    left: 50%;
+    right: 50%;
+    transition: all 0.5s ease;
+  }
+  
+  .hover-underline-menu .menu .underline-from-center:hover::after {
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease;
+  }
+
+  .active::after {
+    left: 0 !important;
+    right: 0 !important;
+    transition: all 0.5s ease;
+    content: "";
+    position: absolute;
+    top: calc(100% - 0.125rem);
+    border-bottom: 0.125rem solid #fefefe;   
+  }
+
+  $menu-underline-from-center-bg: #2C3840;
+  $menu-underline-from-center-border-thickness: 0.125rem;
+  
+  .hover-underline-menu {
+    width: 100%;
+  
+    .menu {
+      background-color: $menu-underline-from-center-bg;
+  
+      a {
+        color: $white;
+        padding: 1.2rem 1.5rem;
+      }
+  
+      .underline-from-center, .hola {
+        position: relative;
+  
+        &::after {
+          content: "";
+          position: absolute;
+          top: calc(100% - #{$menu-underline-from-center-border-thickness});
+          border-bottom: $menu-underline-from-center-border-thickness solid $white;
+          left: 50%;
+          right: 50%;
+          transition: all 0.5s ease;
+        }
+  
+        &:hover::after {
+          left: 0;
+          right: 0;
+          transition: all 0.5s ease;
+        }
+
+      }
+    }
+  }
