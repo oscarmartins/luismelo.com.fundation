@@ -1,0 +1,6 @@
+header.hero {
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    height: 22.5rem;
+}
